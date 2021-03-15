@@ -11,6 +11,15 @@ T sum(const T a[], int size)
     }
     return all_sum;
 }
+template <class subtra>
+subtra sub(const subtra a[], int size, subtra s)
+{
+    for (int i = 0; i < size; i++)
+    {
+        s -= a[i];
+    }
+    return s;
+}
 /*template <class summable>
 summable sum(const summable data[], int size, summable s = 0)
 {
@@ -33,4 +42,6 @@ int main()
     float float_sum = sum(arr2, n);
     cout << "The sum is " << num_sum << endl;
     cout << "The sum2 is " << sum(arr2, n) << endl;
+    cout << "The sub is " << sub(arr, n, 0) << endl;
+    cout << "The sub is " << sub(arr2, n, (float)20) << endl;
 }
